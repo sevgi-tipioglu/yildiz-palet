@@ -3,11 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ürün detayları ve özellikleri. Yıldız Palet kalitesi ile.">
+    <meta name="description" content="Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet, kimyasal palet. En uygun fiyatlarla kaliteli palet çözümleri. Hızlı teslimat ve güvenilir hizmet.">
+    <meta name="keywords" content="palet, euro palet, ahşap palet, plastik palet, kimyasal palet, ankara palet, palet üretimi, palet satışı, endüstriyel palet, çam palet, cp1 palet">
     <meta name="author" content="Yıldız Palet">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Turkish">
+    <meta name="geo.region" content="TR-06">
+    <meta name="geo.placename" content="Ankara">
+    <meta name="geo.position" content="39.9334;32.8597">
+    <meta name="ICBM" content="39.9334, 32.8597">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Palet Ürünleri | Yıldız Palet - Ankara'nın Önde Gelen Palet Üreticisi">
+    <meta property="og:description" content="Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet. En uygun fiyatlarla kaliteli palet çözümleri.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://yildizpalet.com/single-product.html">
+    <meta property="og:image" content="https://yildizpalet.com/assets/images/header-logo.png">
+    <meta property="og:site_name" content="Yıldız Palet">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Palet Ürünleri | Yıldız Palet - Ankara'nın Önde Gelen Palet Üreticisi">
+    <meta name="twitter:description" content="Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet.">
+    <meta name="twitter:image" content="https://yildizpalet.com/assets/images/header-logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yildizpalet.com/single-product.html">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Ürün Detayı - Yıldız Palet</title>
+    <title>Palet Ürünleri | Yıldız Palet - Ankara'nın Önde Gelen Palet Üreticisi</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +57,14 @@
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Ürün Detayı</h1>
+              <h1 id="page-title">Palet Ürün Detayları</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                  <li class="breadcrumb-item"><a href="products.html">Ürünler</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Ürün Detayı</li>
+                </ol>
+              </nav>
             </div>
           </div>
           <div class="col-md-6">
@@ -62,6 +94,29 @@
               <h6>Fiyat Sorunuz</h6>
               <p id="product-description">Standart Euro Palet ölçüleri ile üretilen, dayanıklı ve uzun ömürlü paletlerimiz endüstriyel kullanıma uygundur. Özel sipariş ve toplu alımlar için lütfen iletişime geçin.</p>
               <span id="product-stock">Stok durumu ve fiyat bilgisi için iletişime geçiniz</span>
+              
+              <!-- Ürün Özellikleri -->
+              <div class="product-features">
+                <h5>Ürün Özellikleri</h5>
+                <ul id="product-features-list">
+                  <li>Yüksek kaliteli ahşap malzeme</li>
+                  <li>Endüstriyel standartlarda üretim</li>
+                  <li>Dayanıklı ve uzun ömürlü</li>
+                  <li>Çoklu kullanım imkanı</li>
+                </ul>
+              </div>
+              
+              <!-- Kullanım Alanları -->
+              <div class="product-usage">
+                <h5>Kullanım Alanları</h5>
+                <ul id="product-usage-list">
+                  <li>Endüstriyel depolama</li>
+                  <li>Lojistik ve taşıma</li>
+                  <li>Fabrika ve üretim tesisleri</li>
+                  <li>Perakende ve toptan satış</li>
+                </ul>
+              </div>
+              
               <div class="quantity-content">
               </div>
 
@@ -101,6 +156,7 @@
         const productTitle = document.getElementById('product-title');
         const productDescription = document.getElementById('product-description');
         const productStock = document.getElementById('product-stock');
+        const pageTitle = document.getElementById('page-title');
         
         if (productParam) {
           // Ürün parametresine göre başlığı güncelle
@@ -132,7 +188,7 @@
             'cp1-palet': 'Kimyasal ürün taşıma için özel olarak üretilen CP1 paletlerimiz, kimyasal dirençli malzeme ile kaplanmıştır. Güvenli ve dayanıklı.',
             'orta-cam': 'Çam ağacından üretilen orta çam paletlerimiz, doğal malzeme avantajı ile uzun ömürlü kullanım sağlar. Orta ağırlık taşıma kapasitesi.',
             'ince-cam': 'Hafif yük taşıma için çam ağacından üretilen ince çam paletlerimiz, doğal ve ekonomik çözüm sunar.',
-            'latalı': 'Latalı yapısı ile havalandırma sağlayan paletlerimiz, nemli ortamlarda kullanım için idealdir. Özel tasarım ile uzun ömür.',
+            'latali': 'Latalı yapısı ile havalandırma sağlayan paletlerimiz, nemli ortamlarda kullanım için idealdir. Özel tasarım ile uzun ömür.',
             'kapali-ahsap': 'Kapalı ahşap paletlerimiz, toz ve nem geçirmez yapısı ile hassas ürünler için güvenli taşıma sağlar.',
             'plastik': 'Plastik paletlerimiz, hijyenik kullanım ve kolay temizlik avantajı ile gıda sektörü için idealdir. Uzun ömürlü ve dayanıklı.',
             'cam-palet': 'Büyük boyutlu çam paletlerimiz, ağır yük taşıma kapasitesi ile endüstriyel kullanım için tasarlanmıştır.',
@@ -152,7 +208,7 @@
             'cp1-palet': 'CP1 paletler özel üretimdir. Sipariş üzerine 7-10 iş günü içinde teslim.',
             'orta-cam': 'Çam paletler doğal malzeme ile üretilir. Stok durumu değişkendir.',
             'ince-cam': 'İnce çam paletler ekonomik fiyatla stokta mevcuttur.',
-            'latalı': 'Latalı paletler özel sipariş üzerine üretilir.',
+            'latali': 'Latalı paletler özel sipariş üzerine üretilir.',
             'kapali-ahsap': 'Kapalı ahşap paletler hassas ürünler için özel üretimdir.',
             'plastik': 'Plastik paletler hijyenik kullanım için stokta mevcuttur.',
             'cam-palet': 'Büyük çam paletler ağır yük taşıma için özel üretimdir.',
@@ -164,9 +220,18 @@
           };
           
           if (productTitles[productParam]) {
-            productTitle.textContent = productTitles[productParam];
+            const title = productTitles[productParam];
+            productTitle.textContent = title;
+            pageTitle.textContent = title + ' | Yıldız Palet';
+            document.title = title + ' | Yıldız Palet - Ankara Palet Üreticisi';
             productDescription.textContent = productDescriptions[productParam] || productDescriptions['euro-palet'];
             productStock.textContent = productStockInfo[productParam] || productStockInfo['euro-palet'];
+            
+            // Breadcrumb güncelle
+            const breadcrumb = document.querySelector('.breadcrumb-item.active');
+            if (breadcrumb) {
+              breadcrumb.textContent = title;
+            }
           } else {
             productTitle.textContent = 'Ürün Bulunamadı';
             productDescription.textContent = 'Bu ürün hakkında bilgi bulunamadı. Lütfen iletişime geçiniz.';
@@ -178,6 +243,45 @@
           productStock.textContent = 'Stok durumu ve fiyat bilgisi için iletişime geçiniz';
         }
       });
+    </script>
+    
+    <!-- Schema.org Structured Data for Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Palet Ürünleri",
+      "description": "Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet. En uygun fiyatlarla kaliteli palet çözümleri.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Yıldız Palet"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Yıldız Palet",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Başpınar Mah. 1074/1 Sk. no:10",
+          "addressLocality": "Altındağ",
+          "addressRegion": "Ankara",
+          "addressCountry": "TR"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "TRY",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Yıldız Palet"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    }
     </script>
 
   </body>

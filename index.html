@@ -3,8 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ankara'nın önde gelen palet üreticisi. İkinci el ve sıfır paletler için en uygun fiyatlar.">
+    <meta name="description" content="Ankara'da palet üretimi ve satışı. Euro palet, ikinci el palet, ahşap palet, plastik palet. En uygun fiyatlarla kaliteli palet çözümleri. Hızlı teslimat ve güvenilir hizmet.">
+    <meta name="keywords" content="palet, euro palet, ahşap palet, plastik palet, ikinci el palet, ankara palet, palet üretimi, palet satışı, endüstriyel palet, kimyasal palet, çam palet">
     <meta name="author" content="Yıldız Palet">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Turkish">
+    <meta name="geo.region" content="TR-06">
+    <meta name="geo.placename" content="Ankara">
+    <meta name="geo.position" content="39.9334;32.8597">
+    <meta name="ICBM" content="39.9334, 32.8597">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yıldız Palet | Ankara'nın Önde Gelen Palet Üreticisi">
+    <meta property="og:description" content="Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet. En uygun fiyatlarla kaliteli palet çözümleri.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yildizpalet.com">
+    <meta property="og:image" content="https://yildizpalet.com/assets/images/header-logo.png">
+    <meta property="og:site_name" content="Yıldız Palet">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yıldız Palet | Ankara'nın Önde Gelen Palet Üreticisi">
+    <meta name="twitter:description" content="Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet.">
+    <meta name="twitter:image" content="https://yildizpalet.com/assets/images/header-logo.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <title>Yıldız Palet | Ahşap Palet | Ankara Palet</title>
@@ -17,7 +38,11 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/common.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/products/80x120-euro-palet.jpg" as="image">
+    <link rel="preload" href="assets/images/products/80x120-kalin-palet.jpg" as="image">
+    <link rel="preload" href="assets/images/products/100x120-cp1-palet.jpg" as="image">
   </head>
 
   <body>
@@ -111,5 +136,73 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/components.js" defer></script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Yıldız Palet",
+      "description": "Ankara'da palet üretimi ve satışı. Euro palet, ahşap palet, plastik palet. En uygun fiyatlarla kaliteli palet çözümleri.",
+      "url": "https://yildizpalet.com",
+      "logo": "https://yildizpalet.com/assets/images/header-logo.png",
+      "image": "https://yildizpalet.com/assets/images/header-logo.png",
+      "telephone": "+905464035625",
+      "email": "info@yildizpalet.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Başpınar Mah. 1074/1 Sk. no:10",
+        "addressLocality": "Altındağ",
+        "addressRegion": "Ankara",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9334,
+        "longitude": 32.8597
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "priceRange": "$$",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.9334,
+          "longitude": 32.8597
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Palet Ürünleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "80x120 Euro Palet",
+              "description": "Standart endüstriyel kullanım için Euro palet"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "80x120 Kalın Palet",
+              "description": "Ağır yük taşıma için kalın palet"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "100x120 CP1 Palet",
+              "description": "Kimyasal ürün taşıma için CP1 palet"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </body>
 </html>

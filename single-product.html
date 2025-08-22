@@ -40,10 +40,10 @@
               <div id="slider" class="flexslider">
                 <ul class="slides">
                   <li>
-                    <img src="assets/images/big-01.jpg" alt="Ürün Görünüm 1" />
+                    <img src="assets/images/products/100x100-ahsap-palet.jpg" alt="Ürün Görünüm 1" />
                   </li>
                   <li>
-                    <img src="assets/images/big-02.jpg" alt="Ürün Görünüm 2" />
+                    <img src="assets/images/products/100x100-ahsap-palet.jpg" alt="Ürün Görünüm 2" />
                   </li>
                   <li>
                     <img src="assets/images/big-03.jpg" alt="Ürün Görünüm 3" />
@@ -53,48 +53,18 @@
                   </li>
                 </ul>
               </div>
-              <div id="carousel" class="flexslider">
-                <ul class="slides">
-                  <li>
-                    <img src="assets/images/thumb-01.jpg" alt="Ürün Küçük Görünüm 1" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-02.jpg" alt="Ürün Küçük Görünüm 2" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-03.jpg" alt="Ürün Küçük Görünüm 3" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-04.jpg" alt="Ürün Küçük Görünüm 4" />
-                  </li>
-                </ul>
-              </div>
+            
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-content">
-              <h4>Euro Palet 80x120</h4>
+              <h4 id="product-title">Ürün Yükleniyor...</h4>
               <h6>Fiyat Sorunuz</h6>
-              <p>Standart Euro Palet ölçüleri ile üretilen, dayanıklı ve uzun ömürlü paletlerimiz endüstriyel kullanıma uygundur. Özel sipariş ve toplu alımlar için lütfen iletişime geçin.</p>
-              <span>Stok durumu için iletişime geçiniz</span>
+              <p id="product-description">Standart Euro Palet ölçüleri ile üretilen, dayanıklı ve uzun ömürlü paletlerimiz endüstriyel kullanıma uygundur. Özel sipariş ve toplu alımlar için lütfen iletişime geçin.</p>
+              <span id="product-stock">Stok durumu ve fiyat bilgisi için iletişime geçiniz</span>
               <div class="quantity-content">
-                <div class="left-content">
-                  <h6>Adet</h6>
-                </div>
-                <div class="right-content">
-                  <div class="quantity buttons_added">
-                    <input type="button" value="-" class="minus">
-                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Adet" class="input-text qty text" size="4">
-                    <input type="button" value="+" class="plus">
-                  </div>
-                </div>
               </div>
-              <div class="total">
-                <h4>Toplam: Fiyat Sorunuz</h4>
-                <div class="main-border-button">
-                  <a href="#" class="teklif-al-btn">Teklif Al</a>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -103,43 +73,7 @@
     <!-- Single Page Ends Here -->
 
     <!-- Similar Products Starts Here -->
-    <div class="featured-items">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>Benzer Ürünler</h1>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-carousel owl-theme">
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="İkinci El Palet">
-                  <h4>İkinci El Palet</h4>
-                  <h6>Fiyat Sorunuz</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Özel Ölçü Palet">
-                  <h4>Özel Ölçü Palet</h4>
-                  <h6>Fiyat Sorunuz</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Tek Kullanımlık Palet">
-                  <h4>Tek Kullanımlık Palet</h4>
-                  <h6>Fiyat Sorunuz</h6>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- Similar Products Ends Here -->
 
     <!-- Footer buraya yüklenecek -->
@@ -155,6 +89,96 @@
     <script src="assets/js/isotope.js"></script>
     <script src="assets/js/flex-slider.js"></script>
     <script src="assets/js/components.js" defer></script>
+
+    <!-- Ürün başlığını URL parametresinden alan script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // URL parametrelerini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const productParam = urlParams.get('product');
+        
+        // Ürün elementlerini al
+        const productTitle = document.getElementById('product-title');
+        const productDescription = document.getElementById('product-description');
+        const productStock = document.getElementById('product-stock');
+        
+        if (productParam) {
+          // Ürün parametresine göre başlığı güncelle
+          const productTitles = {
+            'euro-palet': '80x120 Euro Palet',
+            'kalin-palet': '80x120 Kalın Palet',
+            'orta-takoz': '80x120 Orta Takoz Palet',
+            'ince-palet': '80x120 İnce Palet',
+            'cp1-palet': '100x120 CP1 Palet',
+            'orta-cam': '100x120 Orta Çam Palet',
+            'ince-cam': '100x120 İnce Çam Palet',
+            'latali': '100x120 Latalı Palet',
+            'kapali-ahsap': '100x120 Kapalı Ahşap Palet',
+            'plastik': '100x120 Plastik Palet',
+            'cam-palet': '110x130 Çam Palet',
+            'cp3-palet': '114x114 CP3 Palet',
+            'ahsap-palet': '100x100 Ahşap Palet',
+            'kapali-sandik': 'Kapalı Sandık Palet',
+            'kasa-kenari': 'Kasa Kenarı Palet',
+            'standart-olmayan': 'Standart Olmayan Ahşap Palet'
+          };
+          
+          // Ürün açıklamaları
+          const productDescriptions = {
+            'euro-palet': 'Standart Euro Palet ölçüleri ile üretilen, dayanıklı ve uzun ömürlü paletlerimiz endüstriyel kullanıma uygundur. Özel sipariş ve toplu alımlar için lütfen iletişime geçin.',
+            'kalin-palet': 'Ağır yük taşıma kapasitesine sahip kalın paletlerimiz, endüstriyel kullanım için özel olarak tasarlanmıştır. Dayanıklı malzeme ve sağlam yapı.',
+            'orta-takoz': 'Orta ağırlık taşıma için ideal olan orta takoz paletlerimiz, çok yönlü kullanım imkanı sunar. Kaliteli ahşap malzeme ile üretilmiştir.',
+            'ince-palet': 'Hafif yük taşıma için tasarlanmış ince paletlerimiz, ekonomik fiyat ve yeterli dayanıklılık sunar. Küçük işletmeler için ideal çözüm.',
+            'cp1-palet': 'Kimyasal ürün taşıma için özel olarak üretilen CP1 paletlerimiz, kimyasal dirençli malzeme ile kaplanmıştır. Güvenli ve dayanıklı.',
+            'orta-cam': 'Çam ağacından üretilen orta çam paletlerimiz, doğal malzeme avantajı ile uzun ömürlü kullanım sağlar. Orta ağırlık taşıma kapasitesi.',
+            'ince-cam': 'Hafif yük taşıma için çam ağacından üretilen ince çam paletlerimiz, doğal ve ekonomik çözüm sunar.',
+            'latalı': 'Latalı yapısı ile havalandırma sağlayan paletlerimiz, nemli ortamlarda kullanım için idealdir. Özel tasarım ile uzun ömür.',
+            'kapali-ahsap': 'Kapalı ahşap paletlerimiz, toz ve nem geçirmez yapısı ile hassas ürünler için güvenli taşıma sağlar.',
+            'plastik': 'Plastik paletlerimiz, hijyenik kullanım ve kolay temizlik avantajı ile gıda sektörü için idealdir. Uzun ömürlü ve dayanıklı.',
+            'cam-palet': 'Büyük boyutlu çam paletlerimiz, ağır yük taşıma kapasitesi ile endüstriyel kullanım için tasarlanmıştır.',
+            'cp3-palet': 'Küçük boyutlu CP3 paletlerimiz, özel kimyasal dirençli kaplama ile hassas ürünler için güvenli taşıma sağlar.',
+            'ahsap-palet': 'Kare formatta ahşap paletlerimiz, çok yönlü kullanım imkanı sunar. Standart boyut avantajı.',
+            'kapali-sandik': 'Kapalı sandık yapısı ile ürünlerinizi dış etkenlerden koruyan paletlerimiz, hassas ekipman taşıma için idealdir.',
+            'kasa-kenari': 'Kasa kenarı paletlerimiz, özel tasarımı ile ürünlerinizi sabitleyerek güvenli taşıma sağlar.',
+            'standart-olmayan': 'Standart olmayan ölçülerde üretilen ahşap paletlerimiz, özel ihtiyaçlarınız için özel çözümler sunar.'
+          };
+          
+          // Ürün stok bilgileri
+          const productStockInfo = {
+            'euro-palet': 'Stok durumu ve fiyat bilgisi için iletişime geçiniz',
+            'kalin-palet': 'Ağır yük paletleri stokta mevcuttur. Fiyat bilgisi için iletişime geçiniz.',
+            'orta-takoz': 'Orta takoz paletler sipariş üzerine üretilir. Teslimat süresi 3-5 iş günü.',
+            'ince-palet': 'İnce paletler stokta mevcuttur. Toplu alımlarda özel fiyat avantajı.',
+            'cp1-palet': 'CP1 paletler özel üretimdir. Sipariş üzerine 7-10 iş günü içinde teslim.',
+            'orta-cam': 'Çam paletler doğal malzeme ile üretilir. Stok durumu değişkendir.',
+            'ince-cam': 'İnce çam paletler ekonomik fiyatla stokta mevcuttur.',
+            'latalı': 'Latalı paletler özel sipariş üzerine üretilir.',
+            'kapali-ahsap': 'Kapalı ahşap paletler hassas ürünler için özel üretimdir.',
+            'plastik': 'Plastik paletler hijyenik kullanım için stokta mevcuttur.',
+            'cam-palet': 'Büyük çam paletler ağır yük taşıma için özel üretimdir.',
+            'cp3-palet': 'CP3 paletler küçük boyutlu özel üretimdir.',
+            'ahsap-palet': 'Kare ahşap paletler standart boyutlarda stokta mevcuttur.',
+            'kapali-sandik': 'Kapalı sandık paletler özel tasarım üretimdir.',
+            'kasa-kenari': 'Kasa kenarı paletler özel sipariş üzerine üretilir.',
+            'standart-olmayan': 'Standart olmayan paletler özel ölçü ve tasarım gerektirir.'
+          };
+          
+          if (productTitles[productParam]) {
+            productTitle.textContent = productTitles[productParam];
+            productDescription.textContent = productDescriptions[productParam] || productDescriptions['euro-palet'];
+            productStock.textContent = productStockInfo[productParam] || productStockInfo['euro-palet'];
+          } else {
+            productTitle.textContent = 'Ürün Bulunamadı';
+            productDescription.textContent = 'Bu ürün hakkında bilgi bulunamadı. Lütfen iletişime geçiniz.';
+            productStock.textContent = 'Ürün mevcut değildir.';
+          }
+        } else {
+          productTitle.textContent = 'Euro Palet 80x120';
+          productDescription.textContent = 'Standart Euro Palet ölçüleri ile üretilen, dayanıklı ve uzun ömürlü paletlerimiz endüstriyel kullanıma uygundur. Özel sipariş ve toplu alımlar için lütfen iletişime geçin.';
+          productStock.textContent = 'Stok durumu ve fiyat bilgisi için iletişime geçiniz';
+        }
+      });
+    </script>
 
   </body>
 </html>

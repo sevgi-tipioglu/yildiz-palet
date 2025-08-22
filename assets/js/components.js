@@ -54,7 +54,7 @@ const footerHTML = `
           <img src="assets/images/header-logo.png" class="headerIndex" alt="${siteConfig.name} Footer Logo">
         </div>
       </div>
-      <div class="col-md-12">
+      <!-- <div class="col-md-12">
         <div class="footer-menu">
           <ul>
             <li><a href="products.html" title="Palet Ürünlerimiz">Ürünlerimiz</a></li>
@@ -62,8 +62,8 @@ const footerHTML = `
             <li><a href="contact.html" title="İletişim Bilgilerimiz">İletişim</a></li>
           </ul>
         </div>
-      </div>
-      <div class="col-md-12">
+      </div> -->
+      <!-- <div class="col-md-12">
         <div class="social-icons">
           <ul>
             <li><a href="#" title="Facebook Sayfamız" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -72,16 +72,39 @@ const footerHTML = `
             <li><a href="#" title="RSS Beslemesi" aria-label="RSS"><i class="fa fa-rss"></i></a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="col-md-12 text-center mt-4">
-        <p class="address">
-          <strong>Adres:</strong> ${siteConfig.address}<br>
-          <strong>E-posta:</strong> <a href="mailto:${siteConfig.email}">${siteConfig.email}</a><br>
-          <strong>Telefon:</strong> <a href="tel:+${siteConfig.phone}">+${siteConfig.phone}</a>
-        </p>
-        <p class="copyright">
-          © ${new Date().getFullYear()} ${siteConfig.name} - Tüm Hakları Saklıdır
-        </p>
+        <div class="footer-info-section">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fa fa-map-marker"></i>
+              <div class="info-content">
+                <h5>Adres</h5>
+                <p>${siteConfig.address}</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa fa-envelope"></i>
+              <div class="info-content">
+                <h5>E-posta</h5>
+                <p><a href="mailto:${siteConfig.email}">${siteConfig.email}</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa fa-phone"></i>
+              <div class="info-content">
+                <h5>Telefon</h5>
+                <p><a href="tel:+${siteConfig.phone}">+${siteConfig.phone}</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-section">
+            <div class="divider"></div>
+            <p class="copyright">
+              © ${new Date().getFullYear()} <strong>${siteConfig.name}</strong> - Tüm Hakları Saklıdır
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

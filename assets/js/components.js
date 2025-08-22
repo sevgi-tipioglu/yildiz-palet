@@ -3,7 +3,7 @@ const siteConfig = {
     name: 'Yıldız Palet',
     description: 'Ankara\'nın önde gelen palet üreticisi',
     phone: '905464035625',
-    address: 'Ankara, Türkiye',
+    address: 'Başpınar Mah. 1074/1 Sk. no:10 Altındağ / Ankara',
     email: 'info@yildizpalet.com'
 };
 
@@ -51,7 +51,7 @@ const footerHTML = `
     <div class="row">
       <div class="col-md-12">
         <div class="logo">
-          <img src="assets/images/header-logo.png" class="headerIndex" alt="${siteConfig.name} Footer Logo">
+         <!-- <img src="assets/images/header-logo.png" class="headerIndex" alt="${siteConfig.name} Footer Logo"> -->
         </div>
       </div>
       <!-- <div class="col-md-12">
